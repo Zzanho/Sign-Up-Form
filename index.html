@@ -32,48 +32,42 @@
                 </p>
                 <p>You <em>know</em> you want to.</p>
             </div>
-            <div class="body">
-                <form action="" method="get" class="client-info">
-                    <h3>Let's do this!</h3>
-
-                    <div class="inputs">
-                        <div class="first-name">
-                            <label for="first-name">FIRST NAME</label>
-                            <input type="text" name="first-name" id="first-name" />
-                        </div>
-                        <div class="last-name">
-                            <label for="last-name">LAST NAME</label>
-                            <input type="text" name="last-name" id="last-name" />
-                        </div>
-                    </div>
-                    <div class="inputs">
-                        <div class="email">
-                            <label for="email">Email</label>
-                            <input type="email" name="email" id="email" />
-                        </div>
-                        <div class="phone-number">
-                            <label for="phone-number">PHONE NUMBER</label>
-                            <input type="tel" name="phone-number" id="phone-number" />
-                        </div>
-                    </div>
-                    <div class="inputs">
-                        <div class="password">
-                            <label for="password">PASSWORD</label>
-                            <input type="text" name="password" id="password" />
-                        </div>
-                        <div class="confirm-password">
-                            <label for="confirm-password">CONFIRM PASSWORD</label>
-                            <input type="password" name="confirm-password" id="confirm-password" />
-                        </div>
-                    </div>
-
+            <div class='input-section'>
+                <p>Let's do this! </p>
+                <form id="my-form">
+                    <label for="firstname">First Name
+                        <input type="text" id="firstname" name="firstname" required>
+                        <div id='first-name-error' class='error'></div>
+                    </label>
+                    <label for="lastname">Last Name
+                        <input type="text" id="lastname" name="lastname" required>
+                        <div id='last-name-error' class='error'></div>
+                    </label>
+                    <label for="email">Email
+                        <input type="email" id="email" name="email" required autocomplete="off">
+                        <div id='email-error' class='error'></div>
+                    </label>
+                    <label for="phonenumber">Phone Number
+                        <input type="tel" id="phonenumber" name="phonenumber" required pattern='[0-9]{10}'>
+                        <div id='tel-error' class='error'></div>
+                    </label>
+                    <label for="password">Password
+                        <input type="password" id="password" name="password" required
+                            pattern='(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}'>
+                        <div id='password-error' class='error'></div>
+                    </label>
+                    <label for="passwordC">Confirm Password
+                        <input type="password" id="passwordC" name="passwordC" required
+                            pattern='(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}'>
+                        <div id='passwordC-error' class='error'></div>
+                    </label>
                 </form>
-                <div class="footer">
-                    <button type="submit" id="create-account">
-                        Create Account
-                    </button>
-                    <p class="login">Already have an account? <a href="">Log in</a></p>
-                </div>
+            </div>
+            <div class="footer">
+                <button type="submit" id="create-account">
+                    Create Account
+                </button>
+                <p class="login">Already have an account? <a href="">Log in</a></p>
             </div>
         </div>
     </div>
